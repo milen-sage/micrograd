@@ -2,6 +2,8 @@
 
 from micrograd.engine import Value
 from micrograd.nn import Neuron, Layer, MLP
+import numpy as np
+import time
 
 def test_micrograd():
     """
@@ -88,6 +90,20 @@ def test_micrograd():
     print("\n" + "=" * 50)
     print("All tests passed! ✓")
     print("=" * 50)
+    
+    a = np.array([1, 2, 3])
+    b = np.array([4, 5, 6])
+
+    # add them and time the operation
+    start = time.time()
+    s = a + b
+    end = time.time()
+
+    # print the vectors and the result
+    print("a:", a)
+    print("b:", b)
+    print("a + b:", s)
+    print("Time taken for addition:", end - start, "seconds")
     
 
 if __name__ == "__main__":
