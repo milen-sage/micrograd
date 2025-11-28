@@ -28,7 +28,7 @@ def test_micrograd():
     assert x.grad == 3.0, "Gradient of x should be 3.0"
     assert y.grad == 3.0, "Gradient of y should be 3.0"
     print("   ✓ Basic operations passed")
-    """
+    
     # Test 2: Complex computational graph
     print("\n2. Testing complex computational graph...")
     a = Value(-4.0)
@@ -88,7 +88,7 @@ def test_micrograd():
     print("\n" + "=" * 50)
     print("All tests passed! ✓")
     print("=" * 50)
-    """
+    
 
 if __name__ == "__main__":
     test_micrograd()
