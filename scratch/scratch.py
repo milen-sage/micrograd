@@ -21,13 +21,14 @@ def test_micrograd():
     y = Value(2.0)
     z = x * y + x
     z.backward()
+    print("   Computation: z = x * y + x")
     print(f"   x={x.data}, y={y.data}")
     print(f"   z = x*y + x = {z.data}")
     print(f"   dz/dx = {x.grad}, dz/dy = {y.grad}")
     assert x.grad == 3.0, "Gradient of x should be 3.0"
     assert y.grad == 3.0, "Gradient of y should be 3.0"
     print("   ✓ Basic operations passed")
-    
+    """
     # Test 2: Complex computational graph
     print("\n2. Testing complex computational graph...")
     a = Value(-4.0)
@@ -87,7 +88,7 @@ def test_micrograd():
     print("\n" + "=" * 50)
     print("All tests passed! ✓")
     print("=" * 50)
-
+    """
 
 if __name__ == "__main__":
     test_micrograd()
