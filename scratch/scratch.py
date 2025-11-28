@@ -1,4 +1,4 @@
-"""Function to test micrograd functionality and VM"""
+"""Function to test micrograd functionality eclipse VM"""
 
 from micrograd.engine import Value
 from micrograd.nn import Neuron, Layer, MLP
